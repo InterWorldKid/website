@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+/* Reset and global styles */
+body {
+    margin: 0;
+    font-family: 'Doto', sans-serif;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #16f016;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-top: 20px;
+    user-select: all;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header hr {
+    border: none;
+    border-top: 2px dashed white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Content styles */
+.content {
+    text-align: center;
+    padding: 50px;
+    background-color: black;
+    color: white;
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00; /* Green color for the trail */
+    border-radius: 50%; /* Circular trail */
+    pointer-events: none; /* Prevent interaction with the trail */
+    animation: fade 0.5s linear;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+
+/* Text selection color */
+::selection {
+    background-color: #16f016; /* Green background */
+    color: black; /* Text color */
+}
+
+/* General scrollbar styling for WebKit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+    height: 6px; /* Thin horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: black; /* Black background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white; /* White thumb */
+    border-radius: 4px; /* Rounded corners for a sleek look */
+    border: 1px solid white; /* Solid white border for a defined edge */
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e6e6e6; /* Slightly lighter color on hover */
+}
+
+/* Firefox-specific scrollbar styling */
+body {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: white black; /* White thumb on a black track */
+}
+
+/* Style the form labels */
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style the input fields and textarea */
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #00cc00;
+}
+
+/* Style the submit button */
+form button[type="submit"] {
+    background-color: #00ff00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #00cc00;
+    transform: scale(1.15);
+}
+
+form button[type="submit"]:active {
+    background-color: #009900;
+    transform: scale(0.85);
+}
+
+/* Add responsive design for smaller screens */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
